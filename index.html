@@ -10,61 +10,87 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #121212;
-            color: #fff;
+            background: #e0eafc;
+            color: #333;
         }
-        .landing {
+        .header {
+            background: url('./city_background.jpg') no-repeat center center/cover;
+            height: 60vh;
             display: flex;
-            height: 100vh;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            flex-direction: row;
-            background: #121212;
+            justify-content: center;
+            position: relative;
         }
-        .left, .right {
-            flex: 1;
-            height: 100%;
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #fff;
+            margin-bottom: 20px;
         }
-        .left img {
+        .profile-pic img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-right: 5px solid #222;
         }
-        .right {
+        .certifications-badges {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
+            gap: 15px;
         }
-        .right h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .certifications-badges img {
+            width: 100px;
+            height: auto;
         }
-        .right p {
-            font-size: 18px;
-            margin-bottom: 30px;
+        .name-title {
             text-align: center;
-            max-width: 500px;
         }
-        .right button {
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #2E8B57;
+        .name-title h1 {
+            font-size: 36px;
+            margin: 10px 0 5px 0;
+        }
+        .name-title p {
+            font-size: 20px;
+            margin: 0;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .contact-info a {
+            color: #2E8B57;
+            text-decoration: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .buttons button {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             border: none;
-            border-radius: 5px;
-            color: #fff;
+            background-color: #FF4C4C;
+            color: white;
+            font-size: 18px;
             cursor: pointer;
-            transition: background 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
         }
-        .right button:hover {
-            background-color: #256d47;
+        .buttons button:hover {
+            transform: scale(1.1);
         }
         .portfolio {
             display: none;
             padding: 50px 20px;
-            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            background: #fff;
             color: #333;
         }
         .container {
@@ -84,53 +110,55 @@
         ul { padding-left: 20px; }
         .certifications-img { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
         .certifications-img img { width: 100px; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
-        .contact-info {
-            margin-top: 10px;
-            font-size: 16px;
-            text-align: center;
-        }
-        .contact-info a {
-            color: #2E8B57;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
-    <div class="landing">
-        <div class="left">
+    <div class="header">
+        <div class="profile-pic">
             <img src="./photo.jpeg" alt="Abhiram Photo">
         </div>
-        <div class="right">
+        <div class="certifications-badges">
+            <img src="./admin_cert.png" alt="Salesforce Administrator Certification">
+            <img src="./appbuilder_cert.png" alt="Salesforce Platform App Builder Certification">
+        </div>
+        <div class="name-title">
             <h1>Abhiram Chowdary</h1>
-            <p>Salesforce CRM Enthusiast | Business Analyst | Cloud Solutions | Developer</p>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:nuthakkiabhiram@gmail.com">nuthakkiabhiram@gmail.com</a></p>
-                <p>Phone: +1 (614)-592-3078</p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/abhi-ram-n" target="_blank">linkedin.com/in/abhi-ram-n</a></p>
-                <p>Salesforce Profile: <a href="https://www.salesforce.com/trailblazer/abhiramchowdarynuthakki" target="_blank">salesforce.com/trailblazer/abhiramchowdarynuthakki</a></p>
-            </div>
-            <button onclick="document.querySelector('.landing').style.display='none'; document.querySelector('.portfolio').style.display='block';">View My Portfolio</button>
+            <p>Certified Salesforce Admin | Salesforce Portfolio</p>
+        </div>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:nuthakkiabhiram@gmail.com">nuthakkiabhiram@gmail.com</a></p>
+            <p>Phone: +1 (614)-592-3078</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/abhi-ram-n" target="_blank">linkedin.com/in/abhi-ram-n</a></p>
+            <p>Salesforce Profile: <a href="https://www.salesforce.com/trailblazer/abhiramchowdarynuthakki" target="_blank">salesforce.com/trailblazer/abhiramchowdarynuthakki</a></p>
         </div>
     </div>
 
-    <div class="portfolio">
+    <div class="buttons">
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('projects')">My Projects</button>
+        <button onclick="showSection('skills')">Skills</button>
+    </div>
+
+    <div class="portfolio" id="about">
         <div class="container">
             <h2><i class="fas fa-user-tie"></i> About Me</h2>
             <p>Salesforce CRM enthusiast with hands-on experience in app development, automation, and data-driven decision making. Passionate about building efficient, user-friendly solutions using Salesforce and web technologies. Currently pursuing my Master’s in Computer Science at University of South Florida.</p>
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        </div>
+    </div>
+
+    <div class="portfolio" id="projects">
+        <div class="container">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
             <ul>
-                <li>Master of Science in Computer Science, University of South Florida, Tampa, FL (Expected May 2025)</li>
-                <li>Bachelor of Engineering in Computer Science, Velammal Institute of Technology, Tamil Nadu, India (June 2023)</li>
+                <li><strong>Smart Grocery Management Application (Aug 2023 - Dec 2023):</strong> Led inventory data collection, front-end development, built interfaces using React, HTML, CSS, JavaScript, and implemented real-time inventory tracking.</li>
+                <li><strong>Deduplication of Secure Cloud Data (Apr 2023 - Jun 2023):</strong> Developed cloud solution for secure loan data, applied deduplication and re-encryption for efficiency and security.</li>
+                <li><strong>Restaurant Management System (Apr 2022 - Jun 2022):</strong> Built online food ordering platform with seamless navigation and user-friendly design.</li>
             </ul>
-            <h2><i class="fas fa-certificate"></i> Certifications</h2>
-            <ul>
-                <li>Salesforce Certified Administrator (ID: 4118265)</li>
-                <li>Salesforce Certified Platform App Builder (ID: 5293581)</li>
-            </ul>
-            <div class="certifications-img">
-                <img src="./admin_cert.png" alt="Salesforce Administrator Certification">
-                <img src="./appbuilder_cert.png" alt="Salesforce Platform App Builder Certification">
-            </div>
+        </div>
+    </div>
+
+    <div class="portfolio" id="skills">
+        <div class="container">
             <h2><i class="fas fa-tools"></i> Skills</h2>
             <ul>
                 <li>Salesforce CRM: Configuration, Flow Builder, Process Builder, Lightning App Builder, Reports & Dashboards</li>
@@ -138,23 +166,14 @@
                 <li>Tools: Tableau, Git</li>
                 <li>Platforms: Windows, Linux</li>
             </ul>
-            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-            <ul>
-                <li><strong>Smart Grocery Management Application (Aug 2023 - Dec 2023):</strong> Led inventory data collection, front-end development, built interfaces using React, HTML, CSS, JavaScript, and implemented real-time inventory tracking.</li>
-                <li><strong>Deduplication of Secure Cloud Data (Apr 2023 - Jun 2023):</strong> Developed cloud solution for secure loan data, applied deduplication and re-encryption for efficiency and security.</li>
-                <li><strong>Restaurant Management System (Apr 2022 - Jun 2022):</strong> Built online food ordering platform with seamless navigation and user-friendly design.</li>
-            </ul>
-            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
-            <ul>
-                <li><strong>Student Worker, Aramark at University of South Florida (Feb 2024 - Present):</strong> Managed food services, inventory, and customer service during peak hours.</li>
-            </ul>
-            <h2><i class="fas fa-star"></i> Leadership Experience</h2>
-            <ul>
-                <li>Volunteer, Students of India Association, USF</li>
-                <li>Vice President, Computer Science Club, Velammal Institute of Technology</li>
-                <li>Cadet Member, National Cadet Corps (NCC), Velammal Institute of Technology</li>
-            </ul>
         </div>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.portfolio').forEach(div => div.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
