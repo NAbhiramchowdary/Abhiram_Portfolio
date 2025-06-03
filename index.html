@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiram Chowdary Nuthakki - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #fff;
+        }
+        .landing {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background: #121212;
+        }
+        .left, .right {
+            flex: 1;
+            height: 100%;
+        }
+        .left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-right: 5px solid #222;
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        .right h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .right p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 500px;
+        }
+        .right button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #2E8B57;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .right button:hover {
+            background-color: #256d47;
+        }
+        .portfolio {
+            display: none;
+            padding: 50px 20px;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #2E8B57;
+            border-bottom: 2px solid #2E8B57;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        ul { padding-left: 20px; }
+        .certifications-img { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
+        .certifications-img img { width: 100px; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+    <div class="landing">
+        <div class="left">
+            <img src="WhatsApp Image 2025-06-03 at 5.41.15 PM (2).jpeg" alt="Abhiram Photo">
+        </div>
+        <div class="right">
+            <h1>Abhiram Chowdary</h1>
+            <p>Salesforce CRM Enthusiast | Business Analyst | Cloud Solutions | Developer</p>
+            <button onclick="document.querySelector('.landing').style.display='none'; document.querySelector('.portfolio').style.display='block';">View My Portfolio</button>
+        </div>
+    </div>
+
+    <div class="portfolio">
+        <div class="container">
+            <h2><i class="fas fa-user-tie"></i> About Me</h2>
+            <p>Salesforce CRM enthusiast with hands-on experience in app development, automation, and data-driven decision making. Passionate about building efficient, user-friendly solutions using Salesforce and web technologies. Currently pursuing my Master’s in Computer Science at University of South Florida.</p>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <ul>
+                <li>Master of Science in Computer Science, University of South Florida, Tampa, FL (Expected May 2025)</li>
+                <li>Bachelor of Engineering in Computer Science, Velammal Institute of Technology, Tamil Nadu, India (June 2023)</li>
+            </ul>
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <ul>
+                <li>Salesforce Certified Administrator (ID: 4118265)</li>
+                <li>Salesforce Certified Platform App Builder (ID: 5293581)</li>
+            </ul>
+            <div class="certifications-img">
+                <img src="2021-03_Badge_SF-Certified_Administrator_500x490px.png" alt="Salesforce Administrator Certification">
+                <img src="2021-03_Badge_SF-Certified_Platform-App-Builder_500x490px.png" alt="Salesforce Platform App Builder Certification">
+            </div>
+            <h2><i class="fas fa-tools"></i> Skills</h2>
+            <ul>
+                <li>Salesforce CRM: Configuration, Flow Builder, Process Builder, Lightning App Builder, Reports & Dashboards</li>
+                <li>Programming: Python, HTML, CSS, JavaScript</li>
+                <li>Tools: Tableau, Git</li>
+                <li>Platforms: Windows, Linux</li>
+            </ul>
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <ul>
+                <li><strong>Smart Grocery Management Application (Aug 2023 - Dec 2023):</strong> Led inventory data collection, front-end development, built interfaces using React, HTML, CSS, JavaScript, and implemented real-time inventory tracking.</li>
+                <li><strong>Deduplication of Secure Cloud Data (Apr 2023 - Jun 2023):</strong> Developed cloud solution for secure loan data, applied deduplication and re-encryption for efficiency and security.</li>
+                <li><strong>Restaurant Management System (Apr 2022 - Jun 2022):</strong> Built online food ordering platform with seamless navigation and user-friendly design.</li>
+            </ul>
+            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+            <ul>
+                <li><strong>Student Worker, Aramark at University of South Florida (Feb 2024 - Present):</strong> Managed food services, inventory, and customer service during peak hours.</li>
+            </ul>
+            <h2><i class="fas fa-star"></i> Leadership Experience</h2>
+            <ul>
+                <li>Volunteer, Students of India Association, USF</li>
+                <li>Vice President, Computer Science Club, Velammal Institute of Technology</li>
+                <li>Cadet Member, National Cadet Corps (NCC), Velammal Institute of Technology</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
