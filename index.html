@@ -11,59 +11,59 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #e0eafc;
-            color: #333;
+            color: #fff;
         }
         .header {
             background: url('./city_background_new.jpg') no-repeat center center/cover;
-            height: 60vh;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             position: relative;
+            padding: 40px;
         }
         .profile-pic {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #fff;
-            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            margin-right: 50px;
         }
         .profile-pic img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+        .right-section {
+            max-width: 600px;
+            text-shadow: 1px 1px 5px #000;
+        }
         .certifications-badges {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             display: flex;
             gap: 15px;
+            margin-bottom: 20px;
         }
         .certifications-badges img {
             width: 100px;
             height: auto;
         }
-        .name-title {
-            text-align: center;
-        }
         .name-title h1 {
-            font-size: 36px;
+            font-size: 48px;
             margin: 10px 0 5px 0;
         }
         .name-title p {
-            font-size: 20px;
+            font-size: 24px;
             margin: 0;
         }
         .contact-info {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 16px;
+            margin-top: 20px;
+            font-size: 18px;
         }
         .contact-info a {
-            color: #2E8B57;
+            color: #FFD700;
             text-decoration: none;
         }
         .buttons {
@@ -117,19 +117,21 @@
         <div class="profile-pic">
             <img src="./photo.jpeg" alt="Abhiram Photo">
         </div>
-        <div class="certifications-badges">
-            <img src="./admin_cert.png" alt="Salesforce Administrator Certification">
-            <img src="./appbuilder_cert.png" alt="Salesforce Platform App Builder Certification">
-        </div>
-        <div class="name-title">
-            <h1>Abhiram Chowdary</h1>
-            <p>Certified Salesforce Admin | Salesforce Portfolio</p>
-        </div>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:nuthakkiabhiram@gmail.com">nuthakkiabhiram@gmail.com</a></p>
-            <p>Phone: +1 (614)-592-3078</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/abhi-ram-n" target="_blank">linkedin.com/in/abhi-ram-n</a></p>
-            <p>Salesforce Profile: <a href="https://www.salesforce.com/trailblazer/abhiramchowdarynuthakki" target="_blank">salesforce.com/trailblazer/abhiramchowdarynuthakki</a></p>
+        <div class="right-section">
+            <div class="certifications-badges">
+                <img src="./admin_cert.png" alt="Salesforce Administrator Certification">
+                <img src="./appbuilder_cert.png" alt="Salesforce Platform App Builder Certification">
+            </div>
+            <div class="name-title">
+                <h1>Abhiram Chowdary</h1>
+                <p>Certified Salesforce Admin | Salesforce Portfolio</p>
+            </div>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:nuthakkiabhiram@gmail.com">nuthakkiabhiram@gmail.com</a></p>
+                <p>Phone: +1 (614)-592-3078</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/abhi-ram-n" target="_blank">linkedin.com/in/abhi-ram-n</a></p>
+                <p>Salesforce Profile: <a href="https://www.salesforce.com/trailblazer/abhiramchowdarynuthakki" target="_blank">salesforce.com/trailblazer/abhiramchowdarynuthakki</a></p>
+            </div>
         </div>
     </div>
 
