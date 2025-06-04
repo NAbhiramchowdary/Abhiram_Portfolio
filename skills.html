@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: url('images/skills_bg.jpg') no-repeat center center/cover;
             background-attachment: fixed;
@@ -14,35 +15,63 @@
             color: #fff;
         }
         .overlay {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.65);
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
         .container {
             max-width: 900px;
             margin: auto;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.97);
             color: #333;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            margin-top: 50px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.4);
+            margin-top: 30px;
+            transition: all 0.4s ease;
         }
         h1 {
             text-align: center;
-            color: #2E8B57;
+            color: #1A73E8;
+            margin-bottom: 40px;
+            font-size: 42px;
         }
         h2 {
-            color: #2E8B57;
-            border-bottom: 2px solid #2E8B57;
+            color: #1A73E8;
+            border-bottom: 2px solid #1A73E8;
             padding-bottom: 5px;
             margin-top: 30px;
+            font-size: 28px;
         }
-        ul { padding-left: 20px; }
+        .card-section {
+            background: #f7f7f7;
+            border-radius: 15px;
+            padding: 25px 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        .card-section:hover {
+            transform: scale(1.02);
+        }
+        ul {
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
         a.back { 
             color: #FFD700; 
             font-size: 18px; 
             text-decoration: none; 
+            display: block;
+            margin-bottom: 20px;
+        }
+        .icon {
+            margin-right: 10px;
+            color: #1A73E8;
         }
     </style>
 </head>
@@ -52,13 +81,16 @@
         <a href="index.html" class="back">&larr; Back to Home</a>
         <h1>Skills</h1>
 
-        <h2><i class="fas fa-tools"></i> Technical Skills</h2>
-        <ul>
-            <li>Salesforce CRM: Configuration, Flow Builder, Process Builder, Lightning App Builder, Reports & Dashboards</li>
-            <li>Programming: Python, HTML, CSS, JavaScript</li>
-            <li>Tools: Tableau, Git</li>
-            <li>Platforms: Windows, Linux</li>
-        </ul>
+        <div class="card-section">
+            <h2><i class="fas fa-tools icon"></i>Technical Skills</h2>
+            <ul>
+                <li>Salesforce CRM: Configuration, Flow Builder, Process Builder, Lightning App Builder, Reports & Dashboards</li>
+                <li>Programming: Python, HTML, CSS, JavaScript</li>
+                <li>Tools: Tableau, Git</li>
+                <li>Platforms: Windows, Linux</li>
+            </ul>
+        </div>
+
     </div>
 </div>
 </body>
