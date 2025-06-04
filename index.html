@@ -10,18 +10,23 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #e0eafc;
+            background: url('./city_background.jpg') no-repeat center center/cover;
             color: #fff;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            padding: 20px;
         }
         .header {
-            background: url('./city_background_.jpg') no-repeat center center/cover;
-            height: 100vh;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            position: relative;
             padding: 40px;
+            flex-wrap: wrap;
         }
         .profile-pic {
             width: 300px;
@@ -30,7 +35,7 @@
             overflow: hidden;
             border: 5px solid #fff;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            margin-right: 50px;
+            margin: 20px;
         }
         .profile-pic img {
             width: 100%;
@@ -40,11 +45,13 @@
         .right-section {
             max-width: 600px;
             text-shadow: 1px 1px 5px #000;
+            margin: 20px;
         }
         .certifications-badges {
             display: flex;
             gap: 15px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         .certifications-badges img {
             width: 100px;
@@ -71,6 +78,7 @@
             justify-content: center;
             gap: 30px;
             margin: 40px 0;
+            flex-wrap: wrap;
         }
         .buttons button {
             width: 150px;
@@ -90,8 +98,10 @@
         .portfolio {
             display: none;
             padding: 50px 20px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             color: #333;
+            border-radius: 15px;
+            margin-bottom: 40px;
         }
         .container {
             max-width: 1000px;
@@ -113,6 +123,7 @@
     </style>
 </head>
 <body>
+<div class="overlay">
     <div class="header">
         <div class="profile-pic">
             <img src="./photo.jpeg" alt="Abhiram Photo">
@@ -170,12 +181,13 @@
             </ul>
         </div>
     </div>
+</div>
 
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.portfolio').forEach(div => div.style.display = 'none');
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('.portfolio').forEach(div => div.style.display = 'none');
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
 </body>
 </html>
